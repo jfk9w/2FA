@@ -8,7 +8,7 @@ version = '1.6.4'
 
 defaultTasks 'clean', 'shadowJar'
 
-sourceCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -27,6 +27,7 @@ repositories {
 
 dependencies {
     implementation 'org.json:json:20220924'
+    implementation 'com.google.code.gson:gson:2.10'
 
     implementation 'com.lielamar:lielsutils:1.6.31'
 

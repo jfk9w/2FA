@@ -105,7 +105,7 @@ public class JSONStorage extends StorageHandler {
                 return null;
             }
             Object key = jsonObject.get("key");
-            if (key == JSONObject.NULL) {
+            if (JSONObject.NULL.equals(key)) {
                 return null;
             }
 
@@ -160,7 +160,7 @@ public class JSONStorage extends StorageHandler {
                 return null;
             }
             Object ip = jsonObject.get("ip");
-            if (ip == JSONObject.NULL) {
+            if (JSONObject.NULL.equals(ip)) {
                 return null;
             }
 

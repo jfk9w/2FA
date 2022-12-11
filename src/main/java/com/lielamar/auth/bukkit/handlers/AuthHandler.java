@@ -392,7 +392,7 @@ public class AuthHandler extends com.lielamar.auth.shared.handlers.AuthHandler {
             }
 
             if (authState == AuthState.NONE) {
-                if (getStorageHandler().getKey(this.playerUUID) == null) {
+                if (!is2FAEnabled(this.playerUUID)) {
                     if (player.hasPermission(Constants.demandPermission)) {
                         createKey(this.playerUUID);
                         changeState(this.playerUUID, AuthState.DEMAND_SETUP);

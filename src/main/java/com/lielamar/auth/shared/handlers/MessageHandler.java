@@ -59,7 +59,7 @@ public abstract class MessageHandler {
         RESET_2FA("&aYour 2FA has been reset"),
         NOT_SETUP("&cYou are not setup with 2FA"),
         NO_PERMISSIONS("&cYou do not have permission to run this command"),
-        USE_QR_CODE_TO_SETUP_2FA("&aPlease use the QR code given to setup two-factor authentication"),
+        USE_QR_CODE_TO_SETUP_2FA("&aPlease use the QR code given to setup two-factor authentication. Type \"/2fa <code>\" after setup to complete authentication"),
         INVENTORY_FULL_USE_CLICKABLE_MESSAGE("&cYour inventory is full! Please use the clickable message above to get your QR code!"),
         SETUP_RECOMMENDATION("&6This server supports two-factor authentication and is highly recommended"),
         GET_STARTED("&6Get started by running \"/2fa enable\""),

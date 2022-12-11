@@ -101,12 +101,7 @@ public abstract class AuthHandler {
      * @return Whether or not the player has a Secret Key
      */
     public boolean is2FAEnabled(@NotNull UUID uuid) {
-        if (!this.authStates.containsKey(uuid)) {
-            return false;
-        }
-
-        return this.authStates.get(uuid).equals(AuthState.DEMAND_SETUP)
-                || this.authStates.get(uuid).equals(AuthState.PENDING_LOGIN) || this.authStates.get(uuid).equals(AuthState.AUTHENTICATED);
+        return this.storageHandler.hasKey(uuid);
     }
 
     /**

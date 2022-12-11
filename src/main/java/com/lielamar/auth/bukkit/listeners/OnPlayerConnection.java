@@ -35,7 +35,9 @@ public class OnPlayerConnection implements Listener {
         Player player = event.getPlayer();
 
         this.plugin.getAuthHandler().removeQRItem(player);
-        this.plugin.getAuthHandler().changeState(player.getUniqueId(), AuthHandler.AuthState.PENDING_LOGIN);
+        if (this.plugin.getStorageHandler().hasKey(player.getUniqueId())) {
+            this.plugin.getAuthHandler().changeState(player.getUniqueId(), AuthHandler.AuthState.PENDING_LOGIN);
+        }
 
         // Adding a 1 tick delay so requests to proxy are sent correctly
         Bukkit.getScheduler().runTaskLater(this.plugin, () -> {
