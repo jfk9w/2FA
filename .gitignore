@@ -36,3 +36,6 @@ fixes.yml
 # Ignore Gradle build output directory
 build
 
+# Visual Studio Code
+.vscode
+bin/
