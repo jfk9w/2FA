@@ -71,7 +71,7 @@ public abstract class MessageHandler {
         RESET_FOR("&a%name%'s 2FA has been reset"),
         YOUR_2FA_WAS_RESET("&cYour 2FA has been reset"),
         PLAYER_NOT_FOUND("&c%name% could not be found"),
-        PLAYER_NOT_SETUP("&c%name% is not setup with 2FA"),
+        PLAYER_NOT_SETUP("&c%name% is not setup with 2FA or the player is offline"),
         RELOADED_CONFIG("&aConfig was reloaded!"),
         FAILED_AUTHENTICATION_ALERT("&c%name% failed to authenticate %times% times"),
         SOMETHING_WENT_WRONG("&cSomething went wrong. Please contact a Staff Member!"),
