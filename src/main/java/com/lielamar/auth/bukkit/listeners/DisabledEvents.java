@@ -220,7 +220,7 @@ public class DisabledEvents implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     @SuppressWarnings("deprecation")
-    public void onItemFrameInteract(PlayerInteractEntityEvent event) {
+    public void onInteractEntity(PlayerInteractEntityEvent event) {
         if (!this.plugin.getConfigHandler().getDisabledEvents().getOrDefault(event.getClass(), true)) {
             return;
         }
@@ -230,6 +230,19 @@ public class DisabledEvents implements Listener {
                 event.setCancelled(true);
             }
         }
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public void onInteract(PlayerInteractEvent event) {
+        if (!this.plugin.getConfigHandler().getDisabledEvents().getOrDefault(event.getClass(), true)) {
+            return;
+        }
+
+        if (!this.plugin.getAuthHandler().needsToAuthenticate(event.getPlayer().getUniqueId())) {
+            return;
+        }
+
+        event.setCancelled(true);
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)

@@ -467,6 +467,7 @@ public final class ConfigHandler extends com.lielamar.auth.shared.handlers.Confi
         COMMANDS(PlayerCommandPreprocessEvent.class),
         MOVE_ITEM(InventoryMoveItemEvent.class),
         INTERACT_WITH_FRAMES(PlayerInteractEntityEvent.class),
+        INTERACT(PlayerInteractEvent.class),
         DEATH(PlayerDeathEvent.class);
 
         private final Class<? extends Event> matchingEvent;
